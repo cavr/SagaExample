@@ -1,0 +1,2 @@
+export const EXAMPLE_ACTION = 'EXAMPLE_ACTION';
+export const SAGA_ACTION = 'SAGA_ACTION';
