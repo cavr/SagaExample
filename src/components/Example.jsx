@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createExample } from '../actions'
+import { Link } from 'react-router-dom';
 
 class Example extends Component {
    addCounter = () => {
@@ -16,6 +17,7 @@ class Example extends Component {
         <p>{this.props.example}</p>
         <button onClick={this.addCounter}>Add</button>
         <div>{hello.a}</div>
+        <Link to="/">Go to HOME</Link>
       </div>
     );
   }

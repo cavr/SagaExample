@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import { createStore, applyMiddleware } from "redux";
-import { Provider } from "react-redux";
-import thunk from "redux-thunk";
-import reducers from "./reducers";
-import Root from "./components/Root";
-import createSagaMiddleWare from 'redux-saga'  
-import mySaga from './sagas/sagas';
-
+import { NavLink  } from 'react-router-dom';
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -45,9 +38,6 @@ class Hello extends Component {
   }
 }
 
-const sagaMiddleWare = createSagaMiddleWare();
-const store = createStore(reducers, {}, applyMiddleware(thunk, sagaMiddleWare));
-sagaMiddleWare.run(mySaga);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -111,7 +101,6 @@ class App extends Component {
   };
   render() {
     return (
-      <Provider store={store}>
         <div className="App">
           <p>{this.returnSomething()}</p>
           <header className="App-header">
@@ -125,9 +114,8 @@ class App extends Component {
           {this.inputOrButton()}
           <p>{this.returnSomething()}</p>
           {this.props.children}
-          <Root />
+          <NavLink style={{backgroundColor: 'red'}}to="/example">Go to Example</NavLink>
         </div>
-      </Provider>
     );
   }
 }
