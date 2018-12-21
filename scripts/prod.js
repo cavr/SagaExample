@@ -8,7 +8,7 @@ app.get( '/*', function ( request, response ) {
     response.sendFile( path.join( __dirname, '../build', 'index.html' ) );
 } );
 
-const port = 4099;
+const port = 443;
 
 
 app.listen({ port }, () =>
