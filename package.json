@@ -80,7 +80,7 @@
     "babel-loader": "^8.0.4"
   },
   "scripts": {
-    "start": "node scripts/build.js && node scripts/prod.js",
+    "start": "node scripts/dev.js",
     "dev": "node scripts/dev.js",
     "prod": "node scripts/prod.js",
     "build": "node scripts/build.js",
