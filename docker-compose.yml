@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  react-app:
+    container_name: react-apollo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './build:/usr/src/app/build'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4099:4099'

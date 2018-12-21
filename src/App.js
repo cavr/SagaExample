@@ -114,7 +114,8 @@ class App extends Component {
           {this.inputOrButton()}
           <p>{this.returnSomething()}</p>
           {this.props.children}
-          <NavLink style={{backgroundColor: 'red'}}to="/example">Go to Example</NavLink>
+          <NavLink style={{backgroundColor: 'red'}}to="/example">Go to Example </NavLink>
+          <NavLink to="/people">PEOPLE</NavLink>
         </div>
     );
   }

@@ -17,7 +17,8 @@ class Example extends Component {
         <p>{this.props.example}</p>
         <button onClick={this.addCounter}>Add</button>
         <div>{hello.a}</div>
-        <Link to="/">Go to HOME</Link>
+        <Link to="/">Go to HOME </Link>
+        <Link to="/people">PEOPLE</Link>
       </div>
     );
   }
