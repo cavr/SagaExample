@@ -25,7 +25,7 @@ app.use( '/*', ( req, res, next ) => {
 } );
 
 
-const port = 4099;
+const port = process.env.PORT || 3000
 
 
 app.listen({ port }, () =>
